@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 6 - Funzioni Parte 1 in Python</title>
+    <style>
+        /* Stili CSS per la pagina */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        pre code {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lezione 6 - Funzioni Parte 1 in Python</h1>
+    </header>
+    <div class="container">
+        <a class="back-link" href="index.html">← Torna alle lezioni</a>
+        <h2>Contenuto della Lezione</h2>
+
+        <h3>Spiegazione delle Funzioni</h3>
+        <p>Le funzioni sono blocchi di codice riutilizzabili che eseguono una specifica operazione. In Python, le funzioni sono definite utilizzando la parola chiave `def` e possono accettare input, produrre output e/o modificare dati.</p>
+
+        <h3>Utilizzo delle Funzioni</h3>
+        <ul>
+            <li>Le funzioni sono utilizzate per organizzare il codice in blocchi logici, migliorando la leggibilità e la manutenibilità del codice.</li>
+            <li>Le funzioni possono essere chiamate più volte all'interno di un programma, risparmiando tempo e sforzo nella scrittura del codice.</li>
+            <li>Le funzioni possono essere utilizzate per dividere un problema complesso in sottoproblemi più gestibili.</li>
+        </ul>
+
+        <h3>Perché Usare le Funzioni</h3>
+        <p>Le funzioni sono utilizzate per promuovere la riutilizzabilità del codice, ridurre la duplicazione del codice e migliorare la manutenibilità del software. Rappresentano uno dei concetti fondamentali della programmazione modulare.</p>
+
+        <h3>Esempi di Utilizzo delle Funzioni</h3>
+
+        <h4>Creazione di una Matrice</h4>
+        <pre><code>def crea_matrice(n, m, valore_iniziale=0):
+    """
+    Crea una matrice di dimensione n x m con un valore iniziale opzionale.
+    """
+    return [[valore_iniziale] * m for _ in range(n)]
+
+# Esempio di utilizzo
+matrice = crea_matrice(3, 3)
+print(matrice)</code></pre>
+
+        <h4>Creazione di un Vettore</h4>
+        <pre><code>def crea_vettore(n, valore_iniziale=0):
+    """
+    Crea un vettore di dimensione n con un valore iniziale opzionale.
+    """
+    return [valore_iniziale] * n
+
+# Esempio di utilizzo
+vettore = crea_vettore(5)
+print(vettore)</code></pre>
+
+        <h4>Trova Valori Maggiori di un Numero</h4>
+        <pre><code>def trova_valori_maggiori(vettore, soglia):
+    """
+    Restituisce una lista di valori maggiori di una soglia.
+    """
+    return [x for x in vettore if x > soglia]
+
+# Esempio di utilizzo
+valori = [10, 20, 30, 40, 50]
+soglia = 25
+risultato = trova_valori_maggiori(valori, soglia)
+print(risultato)</code></pre>
+
+        <h4>Calcolo del Massimo e del Minimo</h4>
+        <pre><code>def massimo(vettore):
+    """
+    Restituisce il valore massimo in un vettore.
+    """
+    return max(vettore)
+
+def minimo(vettore):
+    """
+    Restituisce il valore minimo in un vettore.
+    """
+    return min(vettore)</code></pre>
+
+        <h4>Calcolo della Media e della Mediana</h4>
+        <pre><code>def media(vettore):
+    """
+    Calcola la media dei valori in un vettore.
+    """
+    return sum(vettore) / len(vettore)
+
+def mediana(vettore):
+    """
+    Calcola la mediana dei valori in un vettore.
+    """
+    ordinato = sorted(vettore)
+    lunghezza = len(ordinato)
+    if lunghezza % 2 == 0:
+        mediano_basso = ordinato[lunghezza // 2 - 1]
+        mediano_alto = ordinato[lunghezza // 2]
+        return (mediano_basso + mediano_alto) / 2
+    else:
+        return ordinato[lunghezza // 2]</code></pre>
+
+        <h4>Risoluzione delle Equazioni</h4>
+        <pre><code>def risolvi_eq_1_grado(a, b):
+    """
+    Risolve un'equazione di primo grado nella forma ax + b = 0.
+    Restituisce la soluzione.
+    """
+    if a == 0:
+        if b == 0:
+            return "L'equazione è indeterminata, ha infinite soluzioni"
+        else:
+            return "L'equazione è impossibile, non ha soluzioni"
+    else:
+        return -b / a</code></pre>
+
+        <pre><code>def risolvi_eq_2_grado(a, b, c):
+            """
+            Risolve un'equazione di secondo grado nella forma ax^2 + bx + c = 0.
+            Restituisce le soluzioni reali.
+            """
+            delta = b**2 - 4*a*c
+            if delta > 0:
+                x1 = (-b + delta**0.5) / (2*a)
+                x2 = (-b - delta**0.5) / (2*a)
+                return x1, x2
+            elif delta == 0:
+                return -b / (2*a)
+            else:
+                return "L'equazione non ha soluzioni reali"</code></pre>
+        
+                <pre><code>def risolvi_eq_3_grado(a, b, c, d):
+            """
+            Risolve un'equazione di terzo grado nella forma ax^3 + bx^2 + cx + d = 0.
+            Restituisce le soluzioni reali.
+            """
+            coeff = [a, b, c, d]
+            return np.roots(coeff).real</code></pre>
+        
+                <pre><code>def risolvi_eq_4_grado(a, b, c, d, e):
+            """
+            Risolve un'equazione di quarto grado nella forma ax^4 + bx^3 + cx^2 + dx + e = 0.
+            Restituisce le soluzioni reali.
+            """
+            coeff = [a, b, c, d, e]
+            return np.roots(coeff).real</code></pre>
+        
+                <pre><code>def calcola_integrale(f, a, b, n=100):
+            """
+            Calcola l'integrale definito di una funzione f(x) nell'intervallo [a, b] utilizzando il metodo dei rettangoli.
+            Restituisce il valore approssimato dell'integrale.
+            """
+            dx = (b - a) / n
+            integrale = 0
+            for i in range(n):
+                x = a + i * dx
+                integrale += f(x) * dx
+            return integrale</code></pre>
+        
+                <pre><code>def moda(dati):
+            """
+            Calcola la moda di una lista di dati.
+            Restituisce il valore più frequente.
+            """
+            conteggio = {}
+            for dato in dati:
+                conteggio[dato] = conteggio.get(dato, 0) + 1
+            max_conteggio = max(conteggio.values())
+            moda = [k for k, v in conteggio.items() if v == max_conteggio]
+            return moda[0] if len(moda) == 1 else moda</code></pre>
+        
+                <pre><code>def somma_vettori(v1, v2):
+            """
+            Calcola la somma di due vettori.
+            Restituisce il vettore risultante.
+            """
+            if len(v1) != len(v2):
+                return "I vettori devono avere la stessa lunghezza"
+            return [x + y for x, y in zip(v1, v2)]</code></pre>
+        
+                <pre><code>def prodotto_scalare(v1, v2):
+            """
+            Calcola il prodotto scalare di due vettori.
+            Restituisce il valore scalare risultante.
+            """
+            if len(v1) != len(v2):
+                return "I vettori devono avere la stessa lunghezza"
+            return sum(x * y for x, y in zip(v1, v2))</code></pre>
+        
+                <pre><code>def controllo_grandezza(matrice, righe, colonne):
+            """
+            Controlla la grandezza di una matrice.
+            Restituisce True se la matrice ha le dimensioni specificate, False altrimenti.
+            """
+            return len(matrice) == righe and all(len(riga) == colonne for riga in matrice)</code></pre>
+        
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 2 - Strutture di Controllo in Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        pre code {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: -30px;
+        }
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+   
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lezione 2 - Strutture di Controllo in Python</h1>
+    </header>
+    <div class="container">
+        <a class="back-link" href="index.html">← Torna alle lezioni</a>
+        <h2>Contenuto della Lezione 2</h2>
+
+        <h3>Istruzioni condizionali</h3>
+        <p>Le istruzioni condizionali permettono al programma di eseguire diverse azioni in base al verificarsi di determinate condizioni.</p>
+        <p>In Python, le istruzioni condizionali sono definite con <code>if</code>, <code>elif</code> (else if) e <code>else</code>.</p>
+        <p>Ecco un esempio che mostra come utilizzare tutte e tre le strutture insieme:</p>
+        <pre class="code-container"><code>voto = 75
+if voto >= 90:
+    print("Voto eccellente!")
+elif voto >= 70:
+    print("Voto buono.")
+else:
+    print("Voto insufficiente.")</code></pre>
+
+        <h3>Cicli</h3>
+        <p>I cicli permettono di eseguire una serie di istruzioni ripetutamente fino a quando una condizione di uscita viene soddisfatta.</p>
+        <p>In Python, ci sono principalmente due tipi di cicli: <code>for</code> e <code>while</code>.</p>
+        <p>Ecco un esempio che mostra l'utilizzo di un ciclo <code>for</code> per iterare su una lista e un ciclo <code>while</code> per contare fino a 5:</p>
+        <pre class="code-container"><code>frutta = ["mela", "banana", "pera"]
+for frutto in frutta:
+    print(frutto)
+
+numero = 1
+while numero <= 5:
+    print(numero)
+    numero += 1</code></pre>
+
+        <h3>Esempi di controllo del flusso</h3>
+        <p>Gli esempi di codice forniti dimostrano l'utilizzo delle istruzioni condizionali e dei cicli in situazioni pratiche.</p>
+        <p>Ecco un esempio che combina istruzioni condizionali e cicli per gestire una lista di studenti:</p>
+        <pre class="code-container"><code>studenti = ["Mario", "Luigi", "Paola", "Giovanni"]
+for studente in studenti:
+    if studente == "Paola":
+        print("Paola è presente.")
+        break
+    else:
+        print(studente + " non è presente.")</code></pre>
+
+        <p>Puoi combinare queste strutture di controllo in modi creativi per risolvere una vasta gamma di problemi di programmazione.</p>
+    </div>
+</body>
+</html>

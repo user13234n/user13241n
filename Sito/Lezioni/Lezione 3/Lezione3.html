@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 3 - Array Monodimensionali in Python</title>
+    <style>
+        /* Stili CSS per la pagina */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        pre code {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lezione 3 - Array Monodimensionali in Python</h1>
+    </header>
+    <div class="container">
+        <a class="back-link" href="index.html">← Torna alle lezioni</a>
+        <h2>Contenuto della Lezione</h2>
+
+        <h3>Spiegazione degli Array Monodimensionali</h3>
+        <p>Gli array monodimensionali, o vettori, sono una sequenza di elementi dello stesso tipo. In Python, gli array monodimensionali sono spesso rappresentati come liste.</p>
+
+        <h3>Utilizzo degli Array Monodimensionali</h3>
+        <ul>
+            <li>Le liste sono utilizzate per memorizzare una sequenza di valori, come numeri, stringhe o altri oggetti.</li>
+            <li>Puoi accedere agli elementi di una lista utilizzando indici.</li>
+            <li>Le liste sono flessibili e possono essere modificate aggiungendo, rimuovendo o modificando gli elementi.</li>
+        </ul>
+
+        <h3>Esempi di Utilizzo degli Array Monodimensionali</h3>
+        <h4>Creazione di un Vettore</h4>
+        <pre><code># Creazione di un vettore di numeri interi
+vettore = [1, 2, 3, 4, 5]
+
+# Creazione di un vettore di stringhe
+nomi = ["Alice", "Bob", "Charlie"]</code></pre>
+
+        <h4>Accesso agli Elementi del Vettore</h4>
+        <pre><code># Accesso agli elementi tramite indici
+print(vettore[0])  # Output: 1
+print(nomi[1])     # Output: Bob</code></pre>
+
+        <h4>Modifica degli Elementi del Vettore</h4>
+        <pre><code># Modifica di un elemento
+vettore[2] = 10
+print(vettore)  # Output: [1, 2, 10, 4, 5]</code></pre>
+
+        <h4>Inserimento di Valori Esterni</h4>
+        <p>Puoi inserire valori in un vettore dall'esterno utilizzando l'input dell'utente:</p>
+        <pre><code>valore = int(input("Inserisci un numero: "))
+vettore.append(valore)</code></pre>
+
+        <h4>Generazione Casuale di Valori</h4>
+        <p>Per generare valori casuali in un vettore, puoi utilizzare il modulo random:</p>
+        <pre><code>import random
+
+vettore_casuale = [random.randint(1, 100) for _ in range(10)]</code></pre>
+
+        <h4>Utilizzo in Programmi Più Lunghi</h4>
+        <p>I vettori sono spesso utilizzati in programmi più lunghi per memorizzare dati, effettuare calcoli e svolgere varie operazioni.</p>
+    </div>
+</body>
+</html>

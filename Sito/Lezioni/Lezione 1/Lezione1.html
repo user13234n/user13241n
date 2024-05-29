@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 1 - Introduzione a Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        pre code {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .copy-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: -30px;
+        }
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lezione 1 - Introduzione a Python</h1>
+    </header>
+    <div class="container">
+        <a class="back-link" href="index.html">← Torna alle lezioni</a>
+        <h2>Contenuto della Lezione 1</h2>
+        <h3>Introduzione a Python</h3>
+        <p>Python è un linguaggio di programmazione ad alto livello, interpretato e dinamico, noto per la sua semplicità e leggibilità. È utilizzato in vari campi, dalla sviluppo web all'analisi dei dati, passando per l'intelligenza artificiale.</p>
+
+        <h3>Installazione di Python</h3>
+        <p>Per installare Python, visita il sito ufficiale <a href="https://www.python.org/downloads/" target="_blank">python.org</a> e scarica l'installer per il tuo sistema operativo. Segui le istruzioni per completare l'installazione.</p>
+
+        <h3>Il primo programma in Python</h3>
+        <p>Scriviamo il nostro primo programma in Python. Apri il tuo editor di testo preferito e inserisci il seguente codice:</p>
+        <pre><code>print("Hello, World!")</code></pre>
+        <p>Salva il file con l'estensione <code>.py</code>, ad esempio <code>hello.py</code>, ed eseguilo tramite il terminale/cmd:</p>
+        <pre><code>python hello.py</code></pre>
+
+        <h3>Concetti di base</h3>
+        <h4>Variabili e tipi di dati</h4>
+        <p>In Python, puoi dichiarare una variabile semplicemente assegnando un valore ad essa:</p>
+        <pre><code>x = 5
+y = "Hello, Python"
+z = 3.14</code></pre>
+        <p>Python supporta diversi tipi di dati, tra cui:</p>
+        <ul>
+            <li>Interi: <code>int</code></li>
+            <li>Stringhe: <code>str</code></li>
+            <li>Numeri in virgola mobile: <code>float</code></li>
+            <li>Liste: <code>list</code></li>
+            <li>Dizionari: <code>dict</code></li>
+        </ul>
+
+        <h4>Operatori</h4>
+        <p>Python supporta vari operatori, come quelli aritmetici e di confronto:</p>
+        <pre><code># Operatori aritmetici
+a = 10
+b = 3
+print(a + b)  # Output: 13
+print(a - b)  # Output: 7
+print(a * b)  # Output: 30
+print(a / b)  # Output: 3.3333333333333335
+
+# Operatori di confronto
+print(a == b)  # Output: False
+print(a != b)  # Output: True</code></pre>
+
+        <h4>Input e Output</h4>
+        <p>Puoi ottenere input dall'utente utilizzando la funzione <code>input()</code>:</p>
+        <pre><code>nome = input("Inserisci il tuo nome: ")
+print("Ciao, " + nome + "!")</code></pre>
+    </div>
+</body>
+</html>

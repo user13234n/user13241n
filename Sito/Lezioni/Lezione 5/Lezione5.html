@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 5 - Stringhe in Python</title>
+    <style>
+        /* Stili CSS per la pagina */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        pre code {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lezione 5 - Stringhe in Python</h1>
+    </header>
+    <div class="container">
+        <a class="back-link" href="index.html">← Torna alle lezioni</a>
+        <h2>Contenuto della Lezione</h2>
+
+        <h3>Spiegazione delle Stringhe</h3>
+        <p>Le stringhe sono una sequenza di caratteri, che possono essere lettere, numeri, simboli o spazi. In Python, le stringhe sono immutabili, il che significa che non possono essere modificate una volta create.</p>
+
+        <h3>Utilizzo delle Stringhe</h3>
+        <ul>
+            <li>Le stringhe sono utilizzate per rappresentare testo in un programma Python.</li>
+            <li>Puoi accedere ai singoli caratteri di una stringa utilizzando gli indici.</li>
+            <li>Le stringhe supportano molte operazioni, come la concatenazione, la suddivisione e la formattazione.</li>
+        </ul>
+
+        <h3>Perché Usare le Stringhe</h3>
+        <p>Le stringhe sono ampiamente utilizzate in Python per manipolare e rappresentare testo, come input utente, output del programma, messaggi di errore, nomi di file, dati web e molto altro ancora. Sono uno dei tipi di dati fondamentali nel linguaggio di programmazione Python.</p>
+
+        <h3>Esempi di Utilizzo delle Stringhe</h3>
+        <h4>Creazione di una Stringa</h4>
+        <pre><code># Creazione di una stringa
+stringa = "Hello, Python!"</code></pre>
+
+        <h4>Accesso ai Caratteri della Stringa</h4>
+        <pre><code># Accesso ai singoli caratteri
+print(stringa[0])  # Output: H
+print(stringa[-1]) # Output: !</code></pre>
+
+        <h4>Concatenazione di Stringhe</h4>
+        <pre><code># Concatenazione di stringhe
+nome = "Alice"
+saluto = "Ciao, " + nome
+print(saluto)  # Output: Ciao, Alice</code></pre>
+
+        <h4>Suddivisione di una Stringa</h4>
+        <pre><code># Suddivisione di una stringa
+testo = "Python è un linguaggio di programmazione"
+parole = testo.split()
+print(parole)  # Output: ['Python', 'è', 'un', 'linguaggio', 'di', 'programmazione']</code></pre>
+
+        <h4>Formattazione di una Stringa</h4>
+        <pre><code># Formattazione di una stringa
+nome = "Alice"
+età = 30
+messaggio = "Ciao, mi chiamo {} e ho {} anni.".format(nome, età)
+print(messaggio)  # Output: Ciao, mi chiamo Alice e ho 30 anni.</code></pre>
+    </div>
+</body>
+</html>

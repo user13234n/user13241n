@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 8 - Libreria Turtle in Python</title>
+    <style>
+        /* Stili CSS per la pagina */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        pre code {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lezione 8 - Libreria Turtle in Python</h1>
+    </header>
+    <div class="container">
+        <a class="back-link" href="index.html">← Torna alle lezioni</a>
+        <h2>Contenuto della Lezione</h2>
+
+        <h3>Spiegazione della Libreria Turtle</h3>
+        <p>La libreria Turtle è una libreria grafica in Python che consente di disegnare figure geometriche utilizzando un approccio basato sulla tartaruga grafica. È spesso utilizzata per l'insegnamento della programmazione ai principianti, poiché fornisce un ambiente visuale e interattivo.</p>
+
+        <h3>Utilizzo della Libreria Turtle</h3>
+        <p>Per utilizzare la libreria Turtle, è necessario importarla nel proprio script Python e creare un oggetto Turtle. Si possono quindi dare istruzioni alla tartaruga per spostarsi e disegnare sullo schermo.</p>
+
+        <h3>Esempi di Utilizzo della Libreria Turtle</h3>
+
+        <h4>Disegno di una Linea</h4>
+        <pre><code>import turtle
+
+# Creazione dell'oggetto Turtle
+t = turtle.Turtle()
+
+# Disegno di una linea
+t.forward(100)
+
+# Chiusura della finestra
+turtle.done()</code></pre>
+
+        <h4>Disegno di un Quadrato</h4>
+        <pre><code>import turtle
+
+# Creazione dell'oggetto Turtle
+t = turtle.Turtle()
+
+# Disegno di un quadrato
+for _ in range(4):
+    t.forward(100)
+    t.right(90)
+
+# Chiusura della finestra
+turtle.done()</code></pre>
+
+        <h4>Disegno di un Cerchio</h4>
+        <pre><code>import turtle
+
+# Creazione dell'oggetto Turtle
+t = turtle.Turtle()
+
+# Disegno di un cerchio
+t.circle(100)
+
+# Chiusura della finestra
+turtle.done()</code></pre>
+        
+    </div>
+</body>
+</html>

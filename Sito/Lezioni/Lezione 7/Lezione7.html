@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 7 - Funzioni Parte 2 in Python</title>
+    <style>
+        /* Stili CSS per la pagina */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+        pre code {
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lezione 7 - Funzioni Parte 2 in Python</h1>
+    </header>
+    <div class="container">
+        <a class="back-link" href="index.html">← Torna alle lezioni</a>
+        <h2>Contenuto della Lezione</h2>
+
+        <h3>Passaggio di Vettori e Matrici alle Funzioni</h3>
+        <p>In Python, è possibile passare vettori e matrici come parametri alle funzioni. Questo consente di manipolare dati strutturati in modo efficiente.</p>
+
+        <h3>Utilizzo dei Parametri Vettoriali e Matriciali</h3>
+        <ul>
+            <li>Le funzioni possono accettare vettori e matrici come parametri.</li>
+            <li>I parametri vettoriali possono essere utilizzati per operazioni su vettori, come somma, prodotto scalare, ecc.</li>
+            <li>I parametri matriciali possono essere utilizzati per operazioni su matrici, come somma, prodotto, trasposizione, ecc.</li>
+        </ul>
+
+        <h3>Esempi di Utilizzo</h3>
+
+        <h4>Calcolo della Somma di Due Vettori</h4>
+        <pre><code>def somma_vettori(v1, v2):
+    """
+    Calcola la somma di due vettori.
+    Restituisce il vettore risultante.
+    """
+    if len(v1) != len(v2):
+        return "I vettori devono avere la stessa lunghezza"
+    return [x + y for x, y in zip(v1, v2)]
+
+# Esempio di utilizzo
+vettore1 = [1, 2, 3]
+vettore2 = [4, 5, 6]
+risultato = somma_vettori(vettore1, vettore2)
+print(risultato)</code></pre>
+
+        <h4>Calcolo del Prodotto Scalare tra Due Vettori</h4>
+        <pre><code>def prodotto_scalare(v1, v2):
+    """
+    Calcola il prodotto scalare di due vettori.
+    Restituisce il valore scalare risultante.
+    """
+    if len(v1) != len(v2):
+        return "I vettori devono avere la stessa lunghezza"
+    return sum(x * y for x, y in zip(v1, v2))
+
+# Esempio di utilizzo
+vettore1 = [1, 2, 3]
+vettore2 = [4, 5, 6]
+risultato = prodotto_scalare(vettore1, vettore2)
+print(risultato)</code></pre>
+
+        <h4>Calcolo della Somma di Due Matrici</h4>
+        <pre><code>def somma_matrici(matrice1, matrice2):
+            """
+            Calcola la somma di due matrici.
+            Restituisce la matrice risultante.
+            """
+            if len(matrice1) != len(matrice2) or len(matrice1[0]) != len(matrice2[0]):
+                return "Le matrici devono avere le stesse dimensioni"
+            return [[matrice1[i][j] + matrice2[i][j] for j in range(len(matrice1[0]))] for i in range(len(matrice1))]
+        
+        # Esempio di utilizzo
+        matrice1 = [[1, 2], [3, 4]]
+        matrice2 = [[5, 6], [7, 8]]
+        risultato = somma_matrici(matrice1, matrice2)
+        print(risultato)</code></pre>
+        
+                <h4>Calcolo del Prodotto di Due Matrici</h4>
+                <pre><code>def prodotto_matrici(matrice1, matrice2):
+            """
+            Calcola il prodotto di due matrici.
+            Restituisce la matrice risultante.
+            """
+            if len(matrice1[0]) != len(matrice2):
+                return "Il numero di colonne della prima matrice deve essere uguale al numero di righe della seconda matrice"
+            risultato = [[0] * len(matrice2[0]) for _ in range(len(matrice1))]
+            for i in range(len(matrice1)):
+                for j in range(len(matrice2[0])):
+                    for k in range(len(matrice2)):
+                        risultato[i][j] += matrice1[i][k] * matrice2[k][j]
+            return risultato
+        
+        # Esempio di utilizzo
+        matrice1 = [[1, 2], [3, 4]]
+        matrice2 = [[5, 6], [7, 8]]
+        risultato = prodotto_matrici(matrice1, matrice2)
+        print(risultato)</code></pre>
+                
+                <h4>Calcolo della Trasposta di una Matrice</h4>
+                <pre><code>def trasposta(matrice):
+            """
+            Calcola la trasposta di una matrice.
+            Restituisce la matrice trasposta.
+            """
+            return [[matrice[j][i] for j in range(len(matrice))] for i in range(len(matrice[0]))]
+        
+        # Esempio di utilizzo
+        matrice = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        risultato = trasposta(matrice)
+        print(risultato)</code></pre>
+        
+            </div>
+        </body>
+        </html>
+        
